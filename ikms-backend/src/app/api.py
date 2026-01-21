@@ -7,6 +7,11 @@ from .services.indexing_service import index_pdf_file
 from .models import QAResponse, QuestionRequest
 from .services.qa_service import answer_question
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 app = FastAPI(
     title="Class 12 Multi-Agent RAG Demo",
     description=(
