@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from 'react';
 
 import { X } from "lucide-react";
 
+const API_BASE_URL = import.meta.env.REACT_APP_API_URL;
+
 
 import {
   Conversation,
@@ -70,7 +72,7 @@ const [messages, setMessages] = useState([]);
     setStatus("submitted");
 
     try {
-      const res = await fetch("http://localhost:8001/qa", {
+      const res = await fetch("${API_BASE_URL}/qa", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

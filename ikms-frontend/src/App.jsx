@@ -10,6 +10,8 @@ import { DocumentUploadArea } from './components/document-upload-area';
 import { ChatInterface } from './components/chat-interface';
 import MessageInput from './components/MessageInput';
 
+const API_BASE_URL = import.meta.env.REACT_APP_API_URL;
+
 function App() {
   const [uploadedFile, setUploadedFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +20,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://ikms-documentqa-backend.onrender.com/index-pdf", {
+      const response = await fetch("${API_BASE_URL}/index-pdf", {
         method: "POST",
         body: formData, 
       });
