@@ -20,7 +20,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("${API_BASE_URL}/index-pdf", {
+      const response = await fetch(`${API_BASE_URL}/index-pdf`, {
         method: "POST",
         body: formData, 
       });

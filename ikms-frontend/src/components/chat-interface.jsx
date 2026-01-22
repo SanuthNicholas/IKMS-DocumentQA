@@ -72,7 +72,7 @@ const [messages, setMessages] = useState([]);
     setStatus("submitted");
 
     try {
-      const res = await fetch("${API_BASE_URL}/qa", {
+      const res = await fetch(`${API_BASE_URL}/qa`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
