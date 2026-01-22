@@ -10,7 +10,7 @@ import { DocumentUploadArea } from './components/document-upload-area';
 import { ChatInterface } from './components/chat-interface';
 import MessageInput from './components/MessageInput';
 
-const API_BASE_URL = import.meta.env.REACT_APP_API_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 function App() {
   const [uploadedFile, setUploadedFile] = useState(null);
